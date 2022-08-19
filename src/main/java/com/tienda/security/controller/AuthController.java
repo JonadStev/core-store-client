@@ -53,7 +53,8 @@ public class AuthController {
                 nuevoUsuario.getNombre(),
                 nuevoUsuario.getEmail(),
                 nuevoUsuario.getNombreUsuario(),
-                passwordEncoder.encode(nuevoUsuario.getPassword())
+                passwordEncoder.encode(nuevoUsuario.getPassword()),
+                nuevoUsuario.getDireccion()
         );
         Set<Rol> roles = new HashSet<>();
         if(nuevoUsuario.getRoles().contains("delivery"))

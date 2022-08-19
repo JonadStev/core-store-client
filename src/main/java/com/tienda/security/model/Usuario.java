@@ -17,6 +17,8 @@ public class Usuario {
     private String nombreUsuario;
     private String password;
 
+    private String direccion;
+
     /*
     Relación muchos a muchos
     Un usuario puede tener varios roles, y un rol puede pertenecer a varios usuarios.
@@ -31,11 +33,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombre, String email, String nombreUsuario, String password) {
+    public Usuario(String nombre, String email, String nombreUsuario, String password, String direccion) {
         this.nombre = nombre;
         this.email = email;
         this.nombreUsuario = nombreUsuario;
         this.password = password;
+        this.direccion = direccion;
     }
 
     public long getId() {
@@ -84,5 +87,13 @@ public class Usuario {
 
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 }

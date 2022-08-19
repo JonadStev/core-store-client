@@ -9,6 +9,7 @@ public class NuevoUsuario {
     private String nombreUsuario;
     private String email;
     private String password;
+    private String direccion;
     private Set<String> roles = new HashSet<>();
 
     public String getNombre() {
@@ -49,5 +50,13 @@ public class NuevoUsuario {
 
     public void setRoles(Set<String> roles) {
         this.roles = roles;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 }
